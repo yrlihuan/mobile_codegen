@@ -1,0 +1,56 @@
+package: "com.looa.codegendemo"
+views:
+  - name: "launch"
+    initial: true
+    transitions:
+      - trigger: "launch countdown finished"
+        target: "music player"
+
+  - name: "music player"
+    transitions:
+      - trigger: "launch photo gallery"
+        target: "photo gallery"
+      - trigger: "launch message list"
+        target: "message list"
+      - trigger: "launch light sticks"
+        target: "light sticks"
+    commands:
+      - name: "show music list"
+      - name: "show video list"
+      - name: "hide music list"
+      - name: "hide video list"
+      - name: "play music"
+      - name: "pause music"
+      - name: "play video"
+      - name: "show lyrics"
+      - name: "hide lyrics"
+      - name: "navigate back"
+
+  - name: "photo gallery"
+    transitions:
+      - trigger: "launch photo viewer"
+        target: "photo viewer"
+    commands:
+      - name: "navigate back"
+
+  - name: "photo viewer"
+    transitions:
+      - trigger: "launch singer profile"
+        target: "singer profile"
+    commands:
+      - name: "save photo"
+      - name: "show buttons"
+      - name: "hide buttons"
+      - name: "navigate back"
+
+  - name: "singer profile"
+    commands:
+      - name: "navigate back"
+
+  - name: "message list"
+
+  - name: "light sticks"
+    commands:
+      - name: "show buttons"
+      - name: "hide buttons"
+      - name: "navigatet back"
