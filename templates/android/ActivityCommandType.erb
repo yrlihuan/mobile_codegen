@@ -1,0 +1,8 @@
+package <%=@package%>;
+
+public enum ActivityCommandType {
+% @triggers[0...-1].each do |t|
+  <%= NameUtility.toPascalCase(t)%>,
+% end
+  <%= NameUtility.toPascalCase(@triggers[-1])%>
+}

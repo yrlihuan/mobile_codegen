@@ -1,0 +1,38 @@
+package <%=@package%>;
+
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.TextView;
+
+public class <%=activity%> extends ManagedActivity {
+
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+
+    setContentView(R.layout.<%=layout%>);
+    setDefaultEventHandlers();
+  }
+
+  private void setDefaultEventHandlers() {
+%  events.each do |event_name, trigger_transition|
+%    event = NameUtility.toPascalCase(event_name)
+%    event_id = NameUtility.toSnakeCase(event_name)
+    findViewById(R.id.<%= event_id %>).setOnClickListener(handle<%= event %>);
+%  end
+  }
+% events.each do |event_name, trigger_transition|
+%   event = NameUtility.toPascalCase(event_name)
+%   event_id = NameUtility.toSnakeCase(event_name)
+
+  private SimpleOnClickHandler handle<%= event %> = new SimpleOnClickHandler() {
+    @Override
+    public void run() {
+% if trigger_transition
+      <%= activity %>.this.handleCommand(ActivityCommandType.<%= event %>, null);
+% end
+    }
+  };
+% end
+}
