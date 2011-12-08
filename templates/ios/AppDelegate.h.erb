@@ -1,0 +1,34 @@
+//
+//  <%= class_name %>.h
+//  Copyright (c) 2011 <%= @company %>. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+typedef enum {
+    kInit,
+% @triggers.each do |t|
+    k<%= NameUtility.toPascalCase(t) %>,
+% end
+} CommandType;
+
+@interface <%= class_name %>: UIResponder <UIApplicationDelegate>
+{
+    UINavigationController *navigationController_;
+    NSString* currentController_;
+    NSMutableDictionary *transitions_;
+    NSMutableDictionary *cachedControllers_;
+}
+
+@property (strong, nonatomic) UIWindow *window;
+
++ (<%= class_name %>*)getInstance;
+- (BOOL)handleCommand:(CommandType)command;
+- (BOOL)handleCommandWithData:(CommandType)command data:(id)extraData;
+- (void)handleViewDidAppear:(UIViewController*)controller;
+- (void)handleViewDidDisappear:(UIViewController*)controller;
+
+- (void)setupViewTransitions;
+
+@end
+

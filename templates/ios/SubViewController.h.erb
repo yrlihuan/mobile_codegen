@@ -1,0 +1,25 @@
+//
+//  <%= class_name %>.h
+//  Copyright (c) 2011 <%= @company %>. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "<%= @appdelegate %>.h"
+#import "<%= @basecontroller %>.h"
+
+@interface <%= class_name %> : <%= @basecontroller %> {
+}
+
+@property (retain, nonatomic) IBOutlet UIView *layoutRoot;
+
+// View Transitions Actions
+% triggers.each do |e|
+- (IBAction)handle<%= NameUtility.toPascalCase(e) %>:(id)sender;
+% end
+
+// Other Actions
+% commands.each do |e|
+- (IBAction)handle<%= NameUtility.toPascalCase(e) %>:(id)sender;
+% end
+
+@end

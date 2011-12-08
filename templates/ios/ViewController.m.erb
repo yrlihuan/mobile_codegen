@@ -1,0 +1,17 @@
+//
+//  <%= class_name %>.m
+//  Copyright (c) 2011 <%= @company %>. All rights reserved.
+//
+
+#import "<%= class_name %>.h"
+
+@implementation <%= class_name %>
+
+@synthesize extraData;
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [[<%= @appdelegate %> getInstance] handleViewDidAppear:self];
+}
+
+@end

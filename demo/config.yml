@@ -1,4 +1,6 @@
 package: "com.looa.codegendemo"
+company: "xingxinghui.com"
+clsprefix: "HG"
 views:
   - name: "launch"
     initial: true
@@ -8,10 +10,12 @@ views:
 
   - name: "music player"
     transitions:
+      - trigger: "launch video player"
+        target: "video player"
       - trigger: "launch photo gallery"
         target: "photo gallery"
-      - trigger: "launch message list"
-        target: "message list"
+      - trigger: "launch message main"
+        target: "message main"
       - trigger: "launch light sticks"
         target: "light sticks"
     commands:
@@ -26,10 +30,16 @@ views:
       - name: "hide lyrics"
       - name: "navigate back"
 
+  - name: "video player"
+
+  - name: "screensaver"
+
   - name: "photo gallery"
     transitions:
       - trigger: "launch photo viewer"
         target: "photo viewer"
+      - trigger: "launch screensaver"
+        target: "screensaver"
     commands:
       - name: "navigate back"
 
@@ -47,7 +57,20 @@ views:
     commands:
       - name: "navigate back"
 
+  - name: "message main"
+    transitions:
+      - trigger: "launch message list"
+        target: "message list"
+
   - name: "message list"
+    transitions:
+      - trigger: "launch message thread"
+        target: "message thread"
+
+  - name: "message thread"
+    transitions:
+      - trigger: "launch message reply"
+        target: "message reply"
 
   - name: "light sticks"
     commands:

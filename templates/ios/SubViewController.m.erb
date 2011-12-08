@@ -1,0 +1,116 @@
+//
+//  <%= class_name %>.m
+//  Copyright (c) 2011 <%= @company %>. All rights reserved.
+//
+
+#import "<%= class_name %>.h"
+
+@implementation <%= class_name %>
+@synthesize layoutRoot;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)didReceiveMemoryWarning
+{
+    // Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+
+    // Release any cached data, images, etc that aren't in use.
+}
+
+#pragma mark - View lifecycle
+
+// Implement loadView to create a view hierarchy programmatically, without using a nib.
+- (void)loadView
+{
+    CGRect rect = [UIScreen mainScreen].applicationFrame;
+    UIView *view = [[[UIView alloc] initWithFrame:rect] autorelease];
+
+    UIImage *image = [UIImage imageNamed:@"<%= NameUtility.toSnakeCase(v["name"]) %>.png"];
+    UIImageView *background = [[UIImageView alloc]initWithImage:image];
+    [background setFrame:CGRectMake(0, 0, 320, 480)];
+    [view addSubview:background];
+
+    UILabel *text = [[[UILabel alloc] initWithFrame:CGRectMake(20, 0, 280, 20)] autorelease];
+    [text setText:NSStringFromClass([self class])];
+    [view addSubview:text];
+
+    UIButton *button = nil;
+
+% y_pos = 0
+    button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button setFrame:CGRectMake(20, <%= y_pos += 25 %>, 280, 20)];
+    [button setTitle:@"Back" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(navigateBack:) forControlEvents:UIControlEventTouchUpInside];
+    [view addSubview:button];
+
+% (v["transitions"] || []).each do |t|
+% trigger = t["trigger"]
+    button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button setFrame:CGRectMake(20, <%= y_pos += 25 %>, 280, 20)];
+    [button setTitle:@"<%= trigger %>" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(handle<%= NameUtility.toPascalCase(trigger) %>:) forControlEvents:UIControlEventTouchUpInside];
+    [view addSubview:button];
+
+% end
+    view.backgroundColor = [UIColor whiteColor];
+
+    self.view = view;
+    NSLog(@"<%= class_name %>.loadView");
+}
+
+/*
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
+*/
+
+% (v["transitions"] || []).each do |t|
+% trigger = t["trigger"]
+% event = NameUtility.toPascalCase(trigger)
+- (IBAction)handle<%= event %>:(id)sender
+{
+    [[<%= @appdelegate %> getInstance] handleCommandWithData:k<%= event %> data:nil];
+}
+
+% end
+% (v["commands"] || []).each do |c|
+% event = NameUtility.toPascalCase(c["name"])
+- (IBAction)handle<%= event %>:(id)sender
+{
+}
+
+% end
+- (IBAction)navigateBack:(id)sender
+{
+    [[self navigationController] popViewControllerAnimated:YES];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+@end
