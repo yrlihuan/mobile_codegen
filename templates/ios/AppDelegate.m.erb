@@ -59,12 +59,7 @@ static <%= class_name %>* appDelegateInstance = nil;
         return NO;
     }
 
-    id nextController = [cachedControllers_ objectForKey:nextViewClass];
-    if (nextController == nil) {
-        nextController = [[NSClassFromString(nextViewClass) alloc] init];
-        [cachedControllers_ setObject:nextController forKey:nextViewClass];
-    }
-
+    HGViewController *nextController = [[NSClassFromString(nextViewClass) alloc] init];
     [nextController setExtraData:extraData];
     [navigationController_ pushViewController:nextController animated:YES];
 

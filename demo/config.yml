@@ -30,10 +30,6 @@ views:
       - name: "hide lyrics"
       - name: "navigate back"
 
-  - name: "video player"
-
-  - name: "screensaver"
-
   - name: "photo gallery"
     transitions:
       - trigger: "launch photo viewer"
@@ -77,3 +73,8 @@ views:
       - name: "show buttons"
       - name: "hide buttons"
       - name: "navigatet back"
+
+  - name: "video player"
+  - name: "screensaver"
+  - name: "message reply"
+
