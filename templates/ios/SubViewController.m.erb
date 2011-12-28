@@ -5,11 +5,23 @@
 
 #import "<%= class_name %>.h"
 
+// Define Private Methods
+@interface <%= class_name %>()
+@end
+
 @implementation <%= class_name %>
-@synthesize layoutRoot;
+
+// --------------------------------------
+// View Lifecycle
+// --------------------------------------
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
+    if (nibNameOrNil == nil) {
+        [nibNameOrNil release];
+        nibNameOrNil = @"YourXibFileName";
+    }
+
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -17,24 +29,15 @@
     return self;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-
-    // Release any cached data, images, etc that aren't in use.
-}
-
-#pragma mark - View lifecycle
-
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
+// TODO: REMOVE THIS METHOD IF YOU'RE USING NIB FILE
 - (void)loadView
 {
     CGRect rect = [UIScreen mainScreen].applicationFrame;
     UIView *view = [[[UIView alloc] initWithFrame:rect] autorelease];
 
     UIImage *image = [UIImage imageNamed:@"<%= NameUtility.toSnakeCase(v["name"]) %>.png"];
-    UIImageView *background = [[UIImageView alloc]initWithImage:image];
+    UIImageView *background = [[[UIImageView alloc] initWithImage:image] autorelease];
     [background setFrame:CGRectMake(0, 0, 320, 480)];
     [view addSubview:background];
 
@@ -74,6 +77,56 @@
 }
 */
 
+- (void)viewDidUnload
+{
+    // Release any subviews
+
+    [super viewDidUnload];
+}
+
+- (void)dealloc {
+    // Release any variables
+
+    [super dealloc];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    // Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+
+    // Release any cached data, images, etc that aren't in use.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+// --------------------------------------
+// Event Handlers
+// --------------------------------------
 % (v["transitions"] || []).each do |t|
 % trigger = t["trigger"]
 % event = NameUtility.toPascalCase(trigger)
@@ -95,22 +148,8 @@
     [[self navigationController] popViewControllerAnimated:YES];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
+// --------------------------------------
+// Private Methods
+// --------------------------------------
 
 @end
