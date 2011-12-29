@@ -59,7 +59,7 @@ static <%= class_name %>* appDelegateInstance = nil;
         return NO;
     }
 
-    HGViewController *nextController = [[NSClassFromString(nextViewClass) alloc] init];
+    <%= @basecontroller %> *nextController = [[NSClassFromString(nextViewClass) alloc] init];
     [nextController setExtraData:extraData];
     [navigationController_ pushViewController:nextController animated:YES];
 
