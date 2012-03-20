@@ -1,0 +1,33 @@
+package: "com.xingxinghui.billboard"
+company: "xingxinghui.com"
+clsprefix: ""
+views:
+  - name: "launch"
+    initial: true
+    transitions:
+      - trigger: "initialization finished"
+        target: "billboard"
+
+  - name: "billboard"
+    transitions:
+      - trigger: "launch about"
+        target: "about"
+    commands:
+      - name: "play music"
+      - name: "pause music"
+      - name: "play prev"
+      - name: "play next"
+      - name: "show playbar"
+      - name: "hide playbar"
+
+  - name: "about"
+    transitions:
+      - trigger: "launch music association"
+        target: "music association"
+    commands:
+      - name: "open app"
+      - name: "navigate back"
+
+  - name: "music association"
+    commands:
+      - name: "navigate back"

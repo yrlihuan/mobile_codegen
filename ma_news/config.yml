@@ -1,0 +1,33 @@
+package: "com.xingxinghui.manews"
+company: "xingxinghui.com"
+clsprefix: ""
+views:
+  - name: "launch"
+    initial: true
+    transitions:
+      - trigger: "initialization finished"
+        target: "news"
+
+  - name: "news"
+    transitions:
+      - trigger: "launch about"
+        target: "about"
+      - trigger: "launch detail"
+        target: "news detail"
+
+  - name: "news detail"
+    commands:
+      - name: "show prev"
+      - name: "show next"
+
+  - name: "about"
+    transitions:
+      - trigger: "launch music association"
+        target: "music association"
+    commands:
+      - name: "open app"
+      - name: "navigate back"
+
+  - name: "music association"
+    commands:
+      - name: "navigate back"

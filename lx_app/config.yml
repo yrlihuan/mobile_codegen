@@ -1,0 +1,125 @@
+package: "com.xingxinghui.liuxin"
+company: "xingxinghui.com"
+clsprefix: ""
+views:
+  - name: "launch"
+    initial: true
+    transitions:
+      - trigger: "initialization finished"
+        target: "music player"
+
+  - name: "music player"
+    transitions:
+      - trigger: "launch music list"
+        target: "music list"
+      - trigger: "launch video list"
+        target: "video list"
+      - trigger: "launch photo gallery"
+        target: "photo gallery"
+      - trigger: "launch weibo main"
+        target: "weibo main"
+      - trigger: "launch more"
+        target: "more"
+    commands:
+      - name: "play music"
+      - name: "pause music"
+      - name: "play prev"
+      - name: "play next"
+      - name: "show lyrics"
+      - name: "hide lyrics"
+
+  - name: "music list"
+    commands:
+      - name: "play music"
+      - name: "navigate back"
+
+  - name: "video list"
+    transitions:
+      - trigger: "launch video player"
+        target: "video player"
+      - trigger: "launch weibo compose"
+        target: "weibo compose"
+    commands:
+      - name: "download video"
+      - name: "navigate back"
+
+  - name: "photo gallery"
+    transitions:
+      - trigger: "launch photo viewer"
+        target: "photo viewer"
+      - trigger: "launch screensaver"
+        target: "screensaver"
+    commands:
+      - name: "navigate back"
+
+  - name: "photo viewer"
+    transitions:
+      - trigger: "launch weibo compose"
+        target: "weibo compose"
+    commands:
+      - name: "save photo"
+      - name: "show buttons"
+      - name: "hide buttons"
+      - name: "navigate back"
+
+  - name: "screensaver"
+    commands:
+      - name: "lock screen"
+      - name: "unlock screen"
+      - name: "navigate back"
+
+  - name: "weibo main"
+    transitions:
+      - trigger: "launch weibo thread"
+        target: "weibo thread"
+      - trigger: "launch original photo"
+        target: "original photo"
+    commands:
+      - name: "follow"
+      - name: "refresh"
+      - name: "navigate back"
+
+  - name: "weibo thread"
+    transitions:
+      - trigger: "launch weibo compose"
+        target: "weibo compose"
+      - trigger: "launch original photo"
+        target: "original photo"
+    commands:
+      - name: "back to the top"
+      - name: "navigatet back"
+
+  - name: "weibo compose"
+    commands:
+      - name: "post"
+      - name: "navigatet back"
+
+  - name: "original photo"
+    commands:
+      - name: "save photo"
+      - name: "hide buttons"
+      - name: "show buttons"
+      - name: "navigatet back"
+
+  - name: "more"
+    transitions:
+      - trigger: "launch weibo login"
+        target: "weibo login"
+      - trigger: "launch copyright"
+        target: "copyright"
+      - trigger: "launch feedback"
+        target: "feedback"
+    commands:
+      - name: "logoff weibo"
+      - name: "app thread"
+      - name: "navigatet back"
+
+  - name: "feedback"
+    commands:
+      - name: "post"
+      - name: "navigatet back"
+
+  - name: "video player"
+  - name: "copyright"
+  - name: "weibo login"
+
