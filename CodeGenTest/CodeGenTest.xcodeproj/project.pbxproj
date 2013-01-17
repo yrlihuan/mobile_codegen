@@ -1,0 +1,367 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03F7EC8914AAEF7800EFBAEE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F7EC8814AAEF7800EFBAEE /* UIKit.framework */; };
+		03F7EC8B14AAEF7800EFBAEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F7EC8A14AAEF7800EFBAEE /* Foundation.framework */; };
+		03F7EC8D14AAEF7800EFBAEE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F7EC8C14AAEF7800EFBAEE /* CoreGraphics.framework */; };
+		03F7EC9314AAEF7800EFBAEE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03F7EC9114AAEF7800EFBAEE /* InfoPlist.strings */; };
+		03F7ED0814AAF7A100EFBAEE /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F7ECE914AAF7A100EFBAEE /* LaunchViewController.m */; };
+		03F7ED0914AAF7A100EFBAEE /* LightSticksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F7ECEB14AAF7A100EFBAEE /* LightSticksViewController.m */; };
+		03F7ED0A14AAF7A100EFBAEE /* MessageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F7ECED14AAF7A100EFBAEE /* MessageListViewController.m */; };
+		03F7ED0B14AAF7A100EFBAEE /* MessageMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F7ECEF14AAF7A100EFBAEE /* MessageMainViewController.m */; };
+		03F7ED0C14AAF7A100EFBAEE /* MessageReplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F7ECF114AAF7A100EFBAEE /* MessageReplyViewController.m */; };
+		03F7ED0D14AAF7A100EFBAEE /* MessageThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F7ECF314AAF7A100EFBAEE /* MessageThreadViewController.m */; };
+		03F7ED0E14AAF7A100EFBAEE /* MusicPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F7ECF514AAF7A100EFBAEE /* MusicPlayerViewController.m */; };
+		03F7ED0F14AAF7A100EFBAEE /* PhotoGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F7ECF714AAF7A100EFBAEE /* PhotoGalleryViewController.m */; };
+		03F7ED1014AAF7A100EFBAEE /* PhotoViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F7ECF914AAF7A100EFBAEE /* PhotoViewerViewController.m */; };
+		03F7ED1114AAF7A100EFBAEE /* ScreensaverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F7ECFB14AAF7A100EFBAEE /* ScreensaverViewController.m */; };
+		03F7ED1214AAF7A100EFBAEE /* SingerProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F7ECFD14AAF7A100EFBAEE /* SingerProfileViewController.m */; };
+		03F7ED1314AAF7A100EFBAEE /* VideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F7ECFF14AAF7A100EFBAEE /* VideoPlayerViewController.m */; };
+		03F7ED1414AAF7A100EFBAEE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03F7ED0114AAF7A100EFBAEE /* InfoPlist.strings */; };
+		03F7ED1514AAF7A100EFBAEE /* HGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F7ED0414AAF7A100EFBAEE /* HGAppDelegate.m */; };
+		03F7ED1614AAF7A100EFBAEE /* HGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F7ED0614AAF7A100EFBAEE /* HGViewController.m */; };
+		03F7ED1714AAF7A100EFBAEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F7ED0714AAF7A100EFBAEE /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03F7EC8414AAEF7800EFBAEE /* CodeGenTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeGenTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03F7EC8814AAEF7800EFBAEE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		03F7EC8A14AAEF7800EFBAEE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		03F7EC8C14AAEF7800EFBAEE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		03F7EC9014AAEF7800EFBAEE /* CodeGenTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CodeGenTest-Info.plist"; sourceTree = "<group>"; };
+		03F7EC9214AAEF7800EFBAEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		03F7EC9614AAEF7800EFBAEE /* CodeGenTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CodeGenTest-Prefix.pch"; sourceTree = "<group>"; };
+		03F7ECE814AAF7A100EFBAEE /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
+		03F7ECE914AAF7A100EFBAEE /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
+		03F7ECEA14AAF7A100EFBAEE /* LightSticksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightSticksViewController.h; sourceTree = "<group>"; };
+		03F7ECEB14AAF7A100EFBAEE /* LightSticksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightSticksViewController.m; sourceTree = "<group>"; };
+		03F7ECEC14AAF7A100EFBAEE /* MessageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListViewController.h; sourceTree = "<group>"; };
+		03F7ECED14AAF7A100EFBAEE /* MessageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListViewController.m; sourceTree = "<group>"; };
+		03F7ECEE14AAF7A100EFBAEE /* MessageMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageMainViewController.h; sourceTree = "<group>"; };
+		03F7ECEF14AAF7A100EFBAEE /* MessageMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageMainViewController.m; sourceTree = "<group>"; };
+		03F7ECF014AAF7A100EFBAEE /* MessageReplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageReplyViewController.h; sourceTree = "<group>"; };
+		03F7ECF114AAF7A100EFBAEE /* MessageReplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageReplyViewController.m; sourceTree = "<group>"; };
+		03F7ECF214AAF7A100EFBAEE /* MessageThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageThreadViewController.h; sourceTree = "<group>"; };
+		03F7ECF314AAF7A100EFBAEE /* MessageThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageThreadViewController.m; sourceTree = "<group>"; };
+		03F7ECF414AAF7A100EFBAEE /* MusicPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicPlayerViewController.h; sourceTree = "<group>"; };
+		03F7ECF514AAF7A100EFBAEE /* MusicPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicPlayerViewController.m; sourceTree = "<group>"; };
+		03F7ECF614AAF7A100EFBAEE /* PhotoGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoGalleryViewController.h; sourceTree = "<group>"; };
+		03F7ECF714AAF7A100EFBAEE /* PhotoGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoGalleryViewController.m; sourceTree = "<group>"; };
+		03F7ECF814AAF7A100EFBAEE /* PhotoViewerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewerViewController.h; sourceTree = "<group>"; };
+		03F7ECF914AAF7A100EFBAEE /* PhotoViewerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewerViewController.m; sourceTree = "<group>"; };
+		03F7ECFA14AAF7A100EFBAEE /* ScreensaverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreensaverViewController.h; sourceTree = "<group>"; };
+		03F7ECFB14AAF7A100EFBAEE /* ScreensaverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreensaverViewController.m; sourceTree = "<group>"; };
+		03F7ECFC14AAF7A100EFBAEE /* SingerProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingerProfileViewController.h; sourceTree = "<group>"; };
+		03F7ECFD14AAF7A100EFBAEE /* SingerProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingerProfileViewController.m; sourceTree = "<group>"; };
+		03F7ECFE14AAF7A100EFBAEE /* VideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerViewController.h; sourceTree = "<group>"; };
+		03F7ECFF14AAF7A100EFBAEE /* VideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerViewController.m; sourceTree = "<group>"; };
+		03F7ED0214AAF7A100EFBAEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		03F7ED0314AAF7A100EFBAEE /* HGAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGAppDelegate.h; sourceTree = "<group>"; };
+		03F7ED0414AAF7A100EFBAEE /* HGAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGAppDelegate.m; sourceTree = "<group>"; };
+		03F7ED0514AAF7A100EFBAEE /* HGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGViewController.h; sourceTree = "<group>"; };
+		03F7ED0614AAF7A100EFBAEE /* HGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGViewController.m; sourceTree = "<group>"; };
+		03F7ED0714AAF7A100EFBAEE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03F7EC8114AAEF7800EFBAEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03F7EC8914AAEF7800EFBAEE /* UIKit.framework in Frameworks */,
+				03F7EC8B14AAEF7800EFBAEE /* Foundation.framework in Frameworks */,
+				03F7EC8D14AAEF7800EFBAEE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03F7EC7914AAEF7800EFBAEE = {
+			isa = PBXGroup;
+			children = (
+				03F7EC8E14AAEF7800EFBAEE /* CodeGenTest */,
+				03F7EC8714AAEF7800EFBAEE /* Frameworks */,
+				03F7EC8514AAEF7800EFBAEE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		03F7EC8514AAEF7800EFBAEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03F7EC8414AAEF7800EFBAEE /* CodeGenTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		03F7EC8714AAEF7800EFBAEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03F7EC8814AAEF7800EFBAEE /* UIKit.framework */,
+				03F7EC8A14AAEF7800EFBAEE /* Foundation.framework */,
+				03F7EC8C14AAEF7800EFBAEE /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		03F7EC8E14AAEF7800EFBAEE /* CodeGenTest */ = {
+			isa = PBXGroup;
+			children = (
+				03F7ECE714AAF7A100EFBAEE /* controllers */,
+				03F7ED0014AAF7A100EFBAEE /* en.lproj */,
+				03F7ED0314AAF7A100EFBAEE /* HGAppDelegate.h */,
+				03F7ED0414AAF7A100EFBAEE /* HGAppDelegate.m */,
+				03F7ED0514AAF7A100EFBAEE /* HGViewController.h */,
+				03F7ED0614AAF7A100EFBAEE /* HGViewController.m */,
+				03F7ED0714AAF7A100EFBAEE /* main.m */,
+				03F7EC8F14AAEF7800EFBAEE /* Supporting Files */,
+			);
+			path = CodeGenTest;
+			sourceTree = "<group>";
+		};
+		03F7EC8F14AAEF7800EFBAEE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03F7EC9014AAEF7800EFBAEE /* CodeGenTest-Info.plist */,
+				03F7EC9114AAEF7800EFBAEE /* InfoPlist.strings */,
+				03F7EC9614AAEF7800EFBAEE /* CodeGenTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		03F7ECE714AAF7A100EFBAEE /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03F7ECE814AAF7A100EFBAEE /* LaunchViewController.h */,
+				03F7ECE914AAF7A100EFBAEE /* LaunchViewController.m */,
+				03F7ECEA14AAF7A100EFBAEE /* LightSticksViewController.h */,
+				03F7ECEB14AAF7A100EFBAEE /* LightSticksViewController.m */,
+				03F7ECEC14AAF7A100EFBAEE /* MessageListViewController.h */,
+				03F7ECED14AAF7A100EFBAEE /* MessageListViewController.m */,
+				03F7ECEE14AAF7A100EFBAEE /* MessageMainViewController.h */,
+				03F7ECEF14AAF7A100EFBAEE /* MessageMainViewController.m */,
+				03F7ECF014AAF7A100EFBAEE /* MessageReplyViewController.h */,
+				03F7ECF114AAF7A100EFBAEE /* MessageReplyViewController.m */,
+				03F7ECF214AAF7A100EFBAEE /* MessageThreadViewController.h */,
+				03F7ECF314AAF7A100EFBAEE /* MessageThreadViewController.m */,
+				03F7ECF414AAF7A100EFBAEE /* MusicPlayerViewController.h */,
+				03F7ECF514AAF7A100EFBAEE /* MusicPlayerViewController.m */,
+				03F7ECF614AAF7A100EFBAEE /* PhotoGalleryViewController.h */,
+				03F7ECF714AAF7A100EFBAEE /* PhotoGalleryViewController.m */,
+				03F7ECF814AAF7A100EFBAEE /* PhotoViewerViewController.h */,
+				03F7ECF914AAF7A100EFBAEE /* PhotoViewerViewController.m */,
+				03F7ECFA14AAF7A100EFBAEE /* ScreensaverViewController.h */,
+				03F7ECFB14AAF7A100EFBAEE /* ScreensaverViewController.m */,
+				03F7ECFC14AAF7A100EFBAEE /* SingerProfileViewController.h */,
+				03F7ECFD14AAF7A100EFBAEE /* SingerProfileViewController.m */,
+				03F7ECFE14AAF7A100EFBAEE /* VideoPlayerViewController.h */,
+				03F7ECFF14AAF7A100EFBAEE /* VideoPlayerViewController.m */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		03F7ED0014AAF7A100EFBAEE /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				03F7ED0114AAF7A100EFBAEE /* InfoPlist.strings */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		03F7EC8314AAEF7800EFBAEE /* CodeGenTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03F7EC9C14AAEF7800EFBAEE /* Build configuration list for PBXNativeTarget "CodeGenTest" */;
+			buildPhases = (
+				03F7EC8014AAEF7800EFBAEE /* Sources */,
+				03F7EC8114AAEF7800EFBAEE /* Frameworks */,
+				03F7EC8214AAEF7800EFBAEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CodeGenTest;
+			productName = CodeGenTest;
+			productReference = 03F7EC8414AAEF7800EFBAEE /* CodeGenTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03F7EC7B14AAEF7800EFBAEE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 03F7EC7E14AAEF7800EFBAEE /* Build configuration list for PBXProject "CodeGenTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 03F7EC7914AAEF7800EFBAEE;
+			productRefGroup = 03F7EC8514AAEF7800EFBAEE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				03F7EC8314AAEF7800EFBAEE /* CodeGenTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03F7EC8214AAEF7800EFBAEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03F7EC9314AAEF7800EFBAEE /* InfoPlist.strings in Resources */,
+				03F7ED1414AAF7A100EFBAEE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03F7EC8014AAEF7800EFBAEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03F7ED0814AAF7A100EFBAEE /* LaunchViewController.m in Sources */,
+				03F7ED0914AAF7A100EFBAEE /* LightSticksViewController.m in Sources */,
+				03F7ED0A14AAF7A100EFBAEE /* MessageListViewController.m in Sources */,
+				03F7ED0B14AAF7A100EFBAEE /* MessageMainViewController.m in Sources */,
+				03F7ED0C14AAF7A100EFBAEE /* MessageReplyViewController.m in Sources */,
+				03F7ED0D14AAF7A100EFBAEE /* MessageThreadViewController.m in Sources */,
+				03F7ED0E14AAF7A100EFBAEE /* MusicPlayerViewController.m in Sources */,
+				03F7ED0F14AAF7A100EFBAEE /* PhotoGalleryViewController.m in Sources */,
+				03F7ED1014AAF7A100EFBAEE /* PhotoViewerViewController.m in Sources */,
+				03F7ED1114AAF7A100EFBAEE /* ScreensaverViewController.m in Sources */,
+				03F7ED1214AAF7A100EFBAEE /* SingerProfileViewController.m in Sources */,
+				03F7ED1314AAF7A100EFBAEE /* VideoPlayerViewController.m in Sources */,
+				03F7ED1514AAF7A100EFBAEE /* HGAppDelegate.m in Sources */,
+				03F7ED1614AAF7A100EFBAEE /* HGViewController.m in Sources */,
+				03F7ED1714AAF7A100EFBAEE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		03F7EC9114AAEF7800EFBAEE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03F7EC9214AAEF7800EFBAEE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		03F7ED0114AAF7A100EFBAEE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03F7ED0214AAF7A100EFBAEE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		03F7EC9A14AAEF7800EFBAEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		03F7EC9B14AAEF7800EFBAEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		03F7EC9D14AAEF7800EFBAEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CodeGenTest/CodeGenTest-Prefix.pch";
+				INFOPLIST_FILE = "CodeGenTest/CodeGenTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		03F7EC9E14AAEF7800EFBAEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CodeGenTest/CodeGenTest-Prefix.pch";
+				INFOPLIST_FILE = "CodeGenTest/CodeGenTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03F7EC7E14AAEF7800EFBAEE /* Build configuration list for PBXProject "CodeGenTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03F7EC9A14AAEF7800EFBAEE /* Debug */,
+				03F7EC9B14AAEF7800EFBAEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03F7EC9C14AAEF7800EFBAEE /* Build configuration list for PBXNativeTarget "CodeGenTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03F7EC9D14AAEF7800EFBAEE /* Debug */,
+				03F7EC9E14AAEF7800EFBAEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 03F7EC7B14AAEF7800EFBAEE /* Project object */;
+}

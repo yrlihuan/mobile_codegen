@@ -1,0 +1,74 @@
+package: "com.xingxinghui.vkoask"
+company: "xingxinghui.com"
+clsprefix: ""
+views:
+  - name: "launch"
+    initial: true
+    transitions:
+      - trigger: "launch registration"
+        target: "register"
+      - trigger: "launch main view"
+        target: "main view"
+  - name: "register"
+    commands:
+      - name: "email focus lost"
+      - name: "password focus lost"
+      - name: "username focus lost"
+      - name: "registration callback"
+    transitions:
+      - trigger: "launch login option"
+        target: "login"
+      - trigger: "launch main view"
+        target: "main view"
+  - name: "main view"
+    transitions:
+      - trigger: "launch question creation"
+        target: "question creation"
+  - name: "question list"
+    commands:
+      - name: "refresh update"
+      - name: "fetch more"
+      - name: "subject selected"
+    transitions:
+      - trigger: "launch question search"
+        target: "question search"
+      - trigger: "launch question detail"
+        target: "question detail"
+  - name: "question mine"
+    commands:
+      - name: "switch to questions"
+      - name: "switch to answers"
+      - name: "switch to mentions"
+    transitions:
+      - trigger: "launch question detail"
+        target: "question detail"
+  - name: "courses"
+    commands:
+      - name: "switch to recommendation"
+      - name: "switch to purchased"
+      - name: "switch to cached"
+  - name: "more options"
+  - name: "question search"
+    commands:
+      - name: "search"
+    transitions:
+      - trigger: "launch question detail"
+        target: "question detail"
+  - name: "question detail"
+    commands:
+      - name: "play message"
+      - name: "reply message"
+      - name: "fetch more"
+  - name: "question creation"
+    commands:
+      - name: "attach message"
+      - name: "attach image"
+    transitions:
+      - trigger: "launch users list"
+        target: "users list"
+  - name: "users list"
+  - name: "question viewer"
+    commands:
+      - name: "play message"
+      - name: "stop message"
+
